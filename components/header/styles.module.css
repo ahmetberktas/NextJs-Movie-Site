@@ -1,0 +1,62 @@
+.header {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.headerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #f0f0f0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #ff6347;
+}
+
+.navigationMenu {
+    display: flex;
+    gap: 40px;
+    color: #fafafa;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.navigationMenu a {
+    color: inherit;
+    position: relative;
+}
+
+.navigationMenu a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #ff6347;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.navigationMenu a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.navigationMenu a:hover {
+    color: #ff6347;
+}
