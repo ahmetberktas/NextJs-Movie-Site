@@ -14,13 +14,16 @@ function HomeContainer({ selectedCategory }) {
       <Categories categories={Genres.genres} />
       {selectedCategory.movies.length > 0 && (
         <MoviesSection
-          title={
-            Genres.genres.find((genre) => `${genre.id}` === selectedCategory.id)
-              .name
-          }
+          title={(() => {
+            const genre = Genres.genres.find(
+              (genre) => `${genre.id}` === selectedCategory.id
+            );
+            return genre ? genre.name : "Unknown Genre";
+          })()}
           movies={selectedCategory.movies}
         />
       )}
+
       <MoviesSection
         title="Populer Films"
         movies={Movies.results.slice(1, 7)}
