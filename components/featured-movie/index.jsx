@@ -18,7 +18,6 @@ function FeaturedMovie({ movie = {}, isCompact = true }) {
       >
         {overview}
       </p>
-      <p>{process.env.NEXT_PUBLIC_API_KEY}</p>
       <div className={styles.actionButtons}>
         <Link className={styles.playButton} href={`/movie/${movie.id}`}>
           Play
