@@ -6,7 +6,7 @@ import MoviesSection from "@/components/movies-section";
 
 function HomeContainer({
   topMovies = [],
-  populerMovies = [],
+  popularMovies = [],
   selectedCategory,
   categories = [],
 }) {
@@ -29,7 +29,7 @@ function HomeContainer({
       <MoviesSection title="Populer Films" movies={topMovies.slice(1, 11)} />
       <MoviesSection
         title="Your Favorites"
-        movies={populerMovies.slice(7, 17)}
+        movies={popularMovies.slice(7, 17)}
       />
     </div>
   );
